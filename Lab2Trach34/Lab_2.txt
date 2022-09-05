@@ -1,14 +1,16 @@
-Enter size of matrix : 11
-Enter symbol-filler : х
+Enter size of matrix : 13
+Enter symbol-filler : x
 Ragged array : 
-[х]
-[х, х]
-[х, х, х]
-[х, х, х, х]
-[х, х, х, х, х]
-[х, х, х, х, х, х]
-[х, х]
-[х, х, х]
-[х, х, х, х]
-[х, х, х, х, х]
-[х, х, х, х, х, х]
+x	
+x	x	
+x	x	x	
+x	x	x	x	
+x	x	x	x	x	
+x	x	x	x	x	x	
+						x	
+						x	x	
+						x	x	x	
+						x	x	x	x	
+						x	x	x	x	x	
+						x	x	x	x	x	x	
+						x	x	x	x	x	x	x	

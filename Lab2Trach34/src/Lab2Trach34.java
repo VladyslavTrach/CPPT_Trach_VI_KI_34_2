@@ -61,58 +61,25 @@ public class Lab2Trach34 {
 
 
         char [][] arr2  = new char [size][];
-        if (arr2.length % 2 == 0){
-            for (int i = 0; i < size / 2; i++){
-                arr2[i] = new char[i + 1];
-            }
-            for (int i = size / 2; i < size; i++){
+
+        for (int i = 0; i < size; i++){
+            arr2[i] = new char[i + 1];
+            if(i >= size / 2){
                 arr2[i] = new char[i - size / 2 + 1];
             }
+        }
 
-            for (int i = 0; i < size / 2; i++) {
+        for (int i = 0; i < size; i++) {
+            if (i >= size / 2) {
+                for (int j = 0; j <= i - size / 2; j++) {
+                    arr2[i][j] = symbol;
+                }
+            } else {
                 for (int j = 0; j <= i; j++) {
                     arr2[i][j] = symbol;
                 }
             }
-            for (int i = size / 2; i < size; i++) {
-                for (int j = 0; j <= i - size / 2; j++) {
-                    arr2[i][j] = symbol;
-                }
-            }
-        } else {
-            for (int i = 0; i < size / 2 + 1; i++){
-                arr2[i] = new char[i + 1];
-            }
-            for (int i = size / 2 + 1; i < size; i++){
-                arr2[i] = new char[i - size / 2 + 1];
-            }
-
-            for (int i = 0; i < size / 2 + 1; i++) {
-                for (int j = 0; j <= i; j++) {
-                    arr2[i][j] = symbol;
-                }
-            }
-            for (int i = size / 2 + 1; i < size; i++) {
-                for (int j = 0; j <= i - size / 2; j++) {
-                    arr2[i][j] = symbol;
-                }
-            }
         }
-
-        System.out.println("Ragged array :");
-        for (char[] row: arr2) {
-            System.out.println(Arrays.toString(row));
-        }
-
-
-        System.out.println("\n Quad Matrix :");
-        for (int i = 0; i < arr1.length; i++){
-            for (int j = 0; j < arr1.length; j++){
-                System.out.print(arr1[i][j] + " ");
-            }
-            System.out.print("\n");
-        }
-
 
 
         try {
@@ -124,8 +91,27 @@ public class Lab2Trach34 {
             pw.println("Enter size of matrix : " + size);
             pw.println("Enter symbol-filler : " + symbol);
             pw.println("Ragged array : ");
-            for (char[] row: arr2) {
-                pw.println(Arrays.toString(row));
+            System.out.println("Ragged array :");
+
+
+            for (int i = 0; i < size; i++) {
+                if (i < size / 2) {
+                    for (int j = 0; j <= i; j++) {
+                        pw.print(arr2[i][j] + "\t");
+                        System.out.print(arr2[i][j] + "\t");
+                    }
+                    pw.print("\n");
+                    System.out.print("\n");
+                } else {
+                    pw.print("\t".repeat(size/2));
+                    System.out.print("\t".repeat(size/2));
+                    for (int j = 0; j <= i - size / 2; j++) {
+                        pw.print(arr2[i][j] + "\t");
+                        System.out.print(arr2[i][j] + "\t");
+                    }
+                    pw.print("\n");
+                    System.out.print("\n");
+                }
             }
             pw.close();
         } catch (IOException e){
