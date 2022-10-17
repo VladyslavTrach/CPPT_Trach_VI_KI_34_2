@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI34.Trach.Lab4","l":"AssaultRifle"},{"p":"KI34.Trach.Lab4","l":"AssaultRifleApp"},{"p":"KI34.Trach.Lab4","l":"Avtomat"},{"p":"KI34.Trach.Lab4","l":"Weighed"}];updateSearchResults();
